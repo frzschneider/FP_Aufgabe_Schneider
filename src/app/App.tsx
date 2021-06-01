@@ -7,7 +7,11 @@ import { IBottle } from "./models/IBottle";
 import bottleMockData from "./mockData/bottleData.json";
 import { ButtonComponent } from "./components/buttonComponent/buttonComponent";
 
-export const App: React.FunctionComponent = (): React.ReactElement => {
+/**
+ *
+ * @returns React.ReactElement
+ */
+const App: React.FunctionComponent = (): React.ReactElement => {
   const [bottleData, setBottleData] = React.useState<IBottle[]>(bottleMockData);
   return (
     <Router>

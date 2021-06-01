@@ -30,7 +30,15 @@
   margin: 1rem;
   margin-right: 2vh;
   width: 100%;
-  overflow-wrap: break-word;
+  -ms-word-break: break-all;
+  -ms-word-wrap: break-all;
+  -webkit-word-break: break-word;
+  -webkit-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 .FP_ArticleCardName {
@@ -48,11 +56,21 @@
   margin-top: 1rem;
   font-size: 1.5rem;
 }
-
-.FP_ArticleShortDescription {
-}
-
 .FP_ArticleCardPricePerUnit {
   font-size: 0.8rem;
   color: #ccc;
+}
+
+@media only screen and (max-width: 280px) {
+  .FP_ArticleCardTextContainer {
+    margin: 0.5rem;
+    margin-right: 1vh;
+  }
+  .FP_ArticleCardImageContainer {
+    width: 115px;
+  }
+  .FP_ArticleCardName {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+  }
 }

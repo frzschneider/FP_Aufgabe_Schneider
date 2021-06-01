@@ -2,6 +2,11 @@ import React from "react";
 import { IBottleDetailCardComponentProps } from "./bottleDetailCardComponent.Types";
 import "./bottleDetailCardComponent.css";
 
+/**
+ * Return of the bottleDetailCardComponent. Iterates through all articles of a bottle and creates the HTML elements.
+ * @param props as IBottleDetailCardComponentProps
+ * @returns React.ReactElement
+ */
 export const BottleDetailCardComponent: React.FunctionComponent<IBottleDetailCardComponentProps> = (
   props: IBottleDetailCardComponentProps
 ): React.ReactElement => {
@@ -10,7 +15,7 @@ export const BottleDetailCardComponent: React.FunctionComponent<IBottleDetailCar
     <div className="FP_BottleDetailCard">
       {bottleDetails.articles.map((article) => {
         return (
-          <div className="FP_ArticleCard">
+          <div className="FP_ArticleCard" key={article.id}>
             <div className="FP_ArticleCardImageContainer">
               <img className="FP_ArticleCardImage" src={article.image} />
             </div>
